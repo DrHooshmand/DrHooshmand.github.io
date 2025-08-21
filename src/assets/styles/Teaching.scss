@@ -1,0 +1,403 @@
+.teaching-container {
+  padding: 5% 10%;
+  min-height: 100vh;
+}
+
+.teaching-header {
+  text-align: center;
+  margin-bottom: 50px;
+  
+  h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+  
+  .teaching-subtitle {
+    font-size: 1.2em;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto 40px;
+  }
+}
+
+.teaching-stats {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin: 40px 0;
+  
+  .stat {
+    text-align: center;
+    
+    svg {
+      font-size: 2em;
+      color: #5000ca;
+      margin-bottom: 10px;
+    }
+    
+    .stat-number {
+      display: block;
+      font-size: 2.2em;
+      font-weight: bold;
+      color: #5000ca;
+    }
+    
+    .stat-label {
+      display: block;
+      font-size: 1em;
+      color: #666;
+      margin-top: 5px;
+    }
+  }
+}
+
+.teaching-section {
+  margin-bottom: 60px;
+  
+  h2 {
+    font-size: 2.2em;
+    margin-bottom: 30px;
+    color: #333;
+    border-bottom: 3px solid #5000ca;
+    padding-bottom: 10px;
+  }
+}
+
+.courses-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.course-item {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid #5000ca;
+  
+  .course-header {
+    margin-bottom: 20px;
+    
+    h3 {
+      font-size: 1.5em;
+      margin: 0 0 15px 0;
+      color: #333;
+    }
+    
+    .course-meta {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      
+      .institution {
+        color: #5000ca;
+        font-weight: 600;
+      }
+      
+      .period {
+        background: #f8f9fa;
+        color: #495057;
+        padding: 4px 10px;
+        border-radius: 12px;
+        font-size: 0.9em;
+      }
+      
+      .level {
+        background: #e9ecef;
+        color: #495057;
+        padding: 4px 10px;
+        border-radius: 12px;
+        font-size: 0.9em;
+      }
+    }
+  }
+  
+  .course-details {
+    .description {
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    
+    .course-info {
+      margin-bottom: 20px;
+      
+      .students {
+        background: #e3f2fd;
+        color: #1976d2;
+        padding: 6px 12px;
+        border-radius: 15px;
+        font-size: 0.9em;
+        font-weight: 500;
+      }
+    }
+    
+    .topics {
+      h4 {
+        color: #333;
+        margin: 15px 0 10px 0;
+        font-size: 1.1em;
+      }
+      
+      .topic-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        
+        .topic-tag {
+          background: #f0f0f0;
+          color: #555;
+          padding: 4px 10px;
+          border-radius: 15px;
+          font-size: 0.85em;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+.workshops-grid, .mentoring-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+}
+
+.workshop-card, .mentoring-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  h3 {
+    font-size: 1.3em;
+    margin: 0 0 15px 0;
+    color: #333;
+  }
+  
+  .workshop-meta, .mentoring-meta {
+    margin-bottom: 15px;
+    
+    .venue, .institution {
+      display: block;
+      color: #5000ca;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    
+    .year, .duration, .period {
+      background: #f8f9fa;
+      color: #495057;
+      padding: 3px 8px;
+      border-radius: 12px;
+      font-size: 0.85em;
+      margin-right: 8px;
+      margin-bottom: 5px;
+      display: inline-block;
+    }
+  }
+  
+  .description {
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+  
+  .participants, .mentored-count {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #5000ca;
+    font-weight: 500;
+    
+    svg {
+      font-size: 1.2em;
+    }
+  }
+}
+
+.teaching-philosophy {
+  background: #f8f9fa;
+  border-radius: 15px;
+  padding: 40px;
+  margin-top: 50px;
+  
+  h2 {
+    font-size: 2.2em;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    border-bottom: none;
+  }
+  
+  .philosophy-content {
+    max-width: 800px;
+    margin: 0 auto;
+    
+    blockquote {
+      font-size: 1.2em;
+      font-style: italic;
+      color: #555;
+      border-left: 4px solid #5000ca;
+      padding-left: 20px;
+      margin: 0 0 40px 0;
+      line-height: 1.6;
+    }
+    
+    .philosophy-principles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      
+      .principle {
+        background: white;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        
+        h4 {
+          color: #5000ca;
+          margin: 0 0 15px 0;
+          font-size: 1.2em;
+        }
+        
+        p {
+          color: #666;
+          line-height: 1.5;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+// Dark mode styles
+.dark-mode {
+  .course-item, .workshop-card, .mentoring-card {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+  }
+  
+  .course-header h3, .workshop-card h3, .mentoring-card h3 {
+    color: white;
+  }
+  
+  .teaching-section h2 {
+    color: white;
+    border-bottom-color: #8a5cf6;
+  }
+  
+  .teaching-subtitle {
+    color: #ccc !important;
+  }
+  
+  .course-details .description, .workshop-card .description, .mentoring-card .description {
+    color: #ccc;
+  }
+  
+  .institution, .venue {
+    color: #8a5cf6 !important;
+  }
+  
+  .period, .level, .year, .duration {
+    background: rgba(255, 255, 255, 0.2) !important;
+    color: #ddd !important;
+  }
+  
+  .students {
+    background: rgba(129, 199, 255, 0.2) !important;
+    color: #81c7ff !important;
+  }
+  
+  .topic-tag {
+    background: rgba(255, 255, 255, 0.2) !important;
+    color: #ddd !important;
+  }
+  
+  .participants, .mentored-count {
+    color: #8a5cf6 !important;
+  }
+  
+  .stat-label {
+    color: #aaa !important;
+  }
+  
+  .stat-number {
+    color: #8a5cf6 !important;
+  }
+  
+  .teaching-stats svg {
+    color: #8a5cf6 !important;
+  }
+  
+  .teaching-philosophy {
+    background: rgba(255, 255, 255, 0.1) !important;
+    
+    h2 {
+      color: white !important;
+    }
+    
+    blockquote {
+      color: #ccc !important;
+      border-left-color: #8a5cf6 !important;
+    }
+    
+    .principle {
+      background: rgba(255, 255, 255, 0.1) !important;
+      
+      h4 {
+        color: #8a5cf6 !important;
+      }
+      
+      p {
+        color: #ccc !important;
+      }
+    }
+  }
+}
+
+// Responsive design
+@media screen and (max-width: 768px) {
+  .teaching-container {
+    padding: 5%;
+  }
+  
+  .teaching-stats {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .workshops-grid, .mentoring-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .teaching-header h1 {
+    font-size: 2.5em;
+  }
+  
+  .teaching-section h2 {
+    font-size: 1.8em;
+  }
+  
+  .course-meta {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+  }
+  
+  .philosophy-principles {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  
+  .teaching-philosophy {
+    padding: 25px !important;
+  }
+}

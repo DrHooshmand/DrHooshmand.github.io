@@ -1,0 +1,264 @@
+.courses-container {
+  padding: 5% 10%;
+  min-height: 100vh;
+}
+
+.courses-header {
+  text-align: center;
+  margin-bottom: 50px;
+  
+  h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+  
+  .courses-subtitle {
+    font-size: 1.2em;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}
+
+.courses-section {
+  margin-bottom: 60px;
+  
+  .section-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    
+    svg {
+      font-size: 1.5em;
+      color: #5000ca;
+      margin-right: 15px;
+    }
+    
+    h2 {
+      font-size: 2em;
+      margin: 0;
+      color: #333;
+    }
+  }
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+}
+
+.course-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 4px solid #5000ca;
+  
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  &.certification {
+    border-left-color: #28a745;
+  }
+  
+  &.professional {
+    border-left-color: #007bff;
+  }
+  
+  &.academic {
+    border-left-color: #6f42c1;
+  }
+}
+
+.course-header {
+  margin-bottom: 15px;
+  
+  h3 {
+    font-size: 1.3em;
+    margin: 0 0 10px 0;
+    color: #333;
+    line-height: 1.3;
+  }
+  
+  .provider {
+    display: block;
+    color: #5000ca;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  
+  .course-meta {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  .year {
+    background: #f8f9fa;
+    color: #495057;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.85em;
+    font-weight: 500;
+  }
+  
+  .duration, .level {
+    background: #e9ecef;
+    color: #495057;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.85em;
+    font-weight: 500;
+  }
+}
+
+.course-content {
+  .description {
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+  
+  .credential {
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 0.9em;
+    color: #495057;
+    border-left: 3px solid #28a745;
+  }
+}
+
+.courses-summary {
+  text-align: center;
+  padding: 40px 0;
+  background: #f8f9fa;
+  border-radius: 12px;
+  margin-top: 50px;
+  
+  .summary-stats {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 30px;
+    
+    .stat {
+      text-align: center;
+      
+      .stat-number {
+        display: block;
+        font-size: 2.5em;
+        font-weight: bold;
+        color: #5000ca;
+      }
+      
+      .stat-label {
+        display: block;
+        font-size: 1em;
+        color: #666;
+        margin-top: 5px;
+      }
+    }
+  }
+  
+  .summary-note {
+    color: #666;
+    font-style: italic;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+}
+
+// Dark mode styles
+.dark-mode {
+  .course-card {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+  }
+  
+  .course-header h3 {
+    color: white;
+  }
+  
+  .course-content .description {
+    color: #ccc;
+  }
+  
+  .provider {
+    color: #8a5cf6 !important;
+  }
+  
+  .section-header h2 {
+    color: white;
+  }
+  
+  .section-header svg {
+    color: #8a5cf6;
+  }
+  
+  .courses-subtitle {
+    color: #ccc !important;
+  }
+  
+  .year, .duration, .level {
+    background: rgba(255, 255, 255, 0.2) !important;
+    color: #ddd !important;
+  }
+  
+  .credential {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: #ccc !important;
+    border-left-color: #8a5cf6 !important;
+  }
+  
+  .courses-summary {
+    background: rgba(255, 255, 255, 0.1) !important;
+    
+    .summary-note {
+      color: #ccc !important;
+    }
+    
+    .stat-label {
+      color: #aaa !important;
+    }
+    
+    .stat-number {
+      color: #8a5cf6 !important;
+    }
+  }
+}
+
+// Responsive design
+@media screen and (max-width: 768px) {
+  .courses-container {
+    padding: 5%;
+  }
+  
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .courses-header h1 {
+    font-size: 2.5em;
+  }
+  
+  .section-header h2 {
+    font-size: 1.7em;
+  }
+  
+  .summary-stats {
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+  
+  .course-meta {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+  }
+}

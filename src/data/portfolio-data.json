@@ -1,0 +1,150 @@
+{
+  "personal": {
+    "name": "Shahriar Hooshmand, Ph.D.",
+    "title": "Principal AI Scientist & Lead Architect",
+    "subtitle": "",
+    "tagline": "Pioneering AI/ML solutions and generative AI platforms for enterprise innovation",
+    "location": "San Diego, California",
+    "email": "shahriarhoushmand@gmail.com",
+    "phone": "470-535-4755",
+    "linkedin": "https://www.linkedin.com/in/shahriarhooshmand/",
+    "residencyStatus": "U.S. Permanent Resident"
+  },
+  "summary": "My work spans a wide range of areas in computational science and engineering, high-performance computing, and AI/ML, with a particular focus on delivering customer-focused software products across diverse scientific disciplines by developing a full-stack, end-to-end AI software ecosystem. Currently, I am focused on building a generative AI-powered platform that enables enterprise organizations to unleash the full potential of their workforce and optimize the use of their workplace.",
+  "experience": [
+    {
+      "company": "HP",
+      "role": "Principal Data Scientist and Lead Architect",
+      "period": "2023-present",
+      "location": "San Diego, California",
+      "description": "Leading strategic data initiatives, leveraging Large Language Models (LLMs) in innovative, customer-centric SaaS products.",
+      "achievements": [
+        "Acted as a technical lead, managing a multidisciplinary team of scientists in the development and execution of AI-driven software and product innovations",
+        "Orchestrated the adaptation of LLMs into enterprise solutions, significantly enhancing response efficiency by a Virtual Assistant Chatbot",
+        "Pioneered Smart Insight Generation platform using LLMs, delivering actionable business intelligence and market foresight",
+        "Led end-to-end development of data science-focused SaaS offerings, aligning with customer needs for improved user-end experience"
+      ]
+    },
+    {
+      "company": "HP",
+      "role": "Senior Data-AI/ML Scientist",
+      "period": "2022-2023",
+      "location": "San Diego, California",
+      "description": "Delivering new data science/machine learning insights for the HP TechPulse platform.",
+      "achievements": [
+        "Intelligent Fleet Explorer: Prototyped generative AI pipeline system for generating intelligent insights through natural language and visualization",
+        "Support Automation System: Prototyped LLM and GPT fine-tuned on corporate domain-specific knowledge base",
+        "Panacea: Prototyped and productionized NLP-based support automation system to identify and classify customer problems",
+        "Personas Identification and Device Recommendation: Prototyped and productionized personas identification using unsupervised ML"
+      ]
+    },
+    {
+      "company": "General Motors",
+      "role": "Artificial Intelligence/ Machine Learning Scientist",
+      "period": "2021-2022",
+      "location": "",
+      "description": "Pioneered development cycles for autonomous driving systems, working closely with corporate R&D to address industry challenges.",
+      "achievements": [
+        "Complex high-volume data manipulation to identify patterns and trends, employing advanced predictive modeling on time series data",
+        "Constructed advanced data science products, utilizing Python, SQL, and Spark for big data extraction",
+        "Specialized in processing highly imbalanced data, contributing significantly to algorithmic models for autonomous driving systems"
+      ]
+    },
+    {
+      "company": "University of California, Berkeley",
+      "role": "Postdoctoral Scholar",
+      "period": "2019-2021",
+      "location": "Berkeley, CA",
+      "description": "Advanced research in computational materials science and engineering.",
+      "achievements": []
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of California, Berkeley",
+      "degree": "Postdoctoral Scholar",
+      "period": "2019-2021",
+      "location": "Berkeley, CA"
+    },
+    {
+      "institution": "The Ohio State University",
+      "degree": "Ph.D., M.Sc. in Materials Science and Engineering",
+      "concentration": "Computational Science",
+      "gpa": "3.9/4.0",
+      "period": "2014-2019",
+      "location": "Columbus, OH"
+    },
+    {
+      "institution": "The Ohio State University",
+      "degree": "Graduate Minor in Computer Science and Engineering",
+      "concentration": "AI/ML in Science",
+      "gpa": "4.0/4.0",
+      "period": "2017-2019",
+      "location": "Columbus, OH"
+    },
+    {
+      "institution": "Sharif University of Technology",
+      "degree": "B.Sc. in Engineering",
+      "period": "2010-2014",
+      "location": "Tehran, Iran"
+    }
+  ],
+  "skills": {
+    "programming": ["Python", "PySpark", "SQL", "C/C++", "MATLAB", "CUDA", "TypeScript", "JavaScript"],
+    "aiml": ["Scikit-learn", "PyCaret", "PyTorch", "TensorFlow", "MLFlow", "Large Language Models", "Generative AI"],
+    "cloud": ["AWS (EC2, EMR, SageMaker, QuickSight, Bedrock)", "Kubernetes", "Azure Services"],
+    "specializations": ["High-Performance Computing", "GPU-accelerated Analytics", "Distributed Databases", "Big Data Processing"],
+    "domains": ["Autonomous Driving", "Enterprise AI Solutions", "NLP", "Computer Vision", "Predictive Modeling"]
+  },
+  "projects": [
+    {
+      "title": "Virtual Assistant Chatbot",
+      "company": "HP",
+      "description": "Enterprise LLM-powered virtual assistant that significantly enhanced response efficiency for customer support",
+      "technologies": ["Large Language Models", "Python", "NLP", "Enterprise APIs"],
+      "impact": "Significantly enhanced response efficiency"
+    },
+    {
+      "title": "Smart Insight Generation Platform",
+      "company": "HP",
+      "description": "LLM-powered platform delivering actionable business intelligence and market foresight",
+      "technologies": ["Generative AI", "Business Intelligence", "Data Analytics", "Python"],
+      "impact": "Delivering actionable business intelligence"
+    },
+    {
+      "title": "Intelligent Fleet Explorer",
+      "company": "HP",
+      "description": "Generative AI pipeline system for generating intelligent insights through natural language and visualization using structured corporate telemetry datasets",
+      "technologies": ["Generative AI", "Natural Language Processing", "Data Visualization", "Big Data"],
+      "impact": "Intelligent insights generation from telemetry data"
+    },
+    {
+      "title": "Panacea Support Automation",
+      "company": "HP",
+      "description": "NLP-based support automation system to identify and classify customer problems, interact with users, and perform solutions on their devices",
+      "technologies": ["NLP", "Machine Learning", "Automation", "Customer Support"],
+      "impact": "Automated customer problem resolution"
+    },
+    {
+      "title": "Autonomous Driving ML Models",
+      "company": "General Motors",
+      "description": "Advanced predictive modeling for autonomous driving systems using high-dimensional time series data",
+      "technologies": ["Machine Learning", "Time Series Analysis", "Python", "Spark", "Big Data"],
+      "impact": "Contributed to autonomous vehicle technology development"
+    }
+  ],
+  "publications": [
+    "The Instability of Monolayer-Thick PbSe on VSe2",
+    "Mechanistic basis of oxygen sensitivity in titanium",
+    "Atomic-scale modeling of twinning in titanium and other HCP alloys",
+    "An integrated experimental and computational study of diffusion and atomic mobility of the aluminum–magnesium system",
+    "Segregation and Phase Transformations Along Superlattice Intrinsic Stacking Faults in Ni-Based Superalloys"
+  ],
+  "awards": [
+    "Presidential Fellowship - The Ohio State University (Most prestigious Graduate School award)",
+    "Woolley Teaching Fellowship Award - Recognition for academic achievement and intellectual leadership",
+    "Graduate Service Assistantship Award",
+    "Departmental Fellowship and Graduate Research Assistantship"
+  ],
+  "languages": ["English", "Persian"]
+}
