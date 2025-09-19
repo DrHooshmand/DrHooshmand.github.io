@@ -129,18 +129,22 @@
 .cv-experiences, .cv-education {
   .cv-experience-item, .cv-education-item {
     margin-bottom: 25px;
-    padding: 20px;
+    padding: 40px;
     background: white;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    min-height: 200px;
     
     .cv-exp-header, .cv-edu-header {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      margin-bottom: 12px;
+      margin-bottom: 20px;
       
       .cv-exp-left, .cv-edu-left {
+        flex: 1;
+        padding-right: 30px;
+        
         h4 {
           font-size: 1.2em;
           margin: 0 0 5px 0;
@@ -167,6 +171,7 @@
         display: flex;
         flex-direction: column;
         gap: 4px;
+        min-width: 160px;
         
         .cv-period {
           background: #e9ecef;
@@ -202,7 +207,7 @@
       
       li {
         color: #555;
-        margin-bottom: 6px;
+        margin-bottom: 8px;
         line-height: 1.4;
         
         &::marker {
@@ -220,9 +225,10 @@
   
   .cv-skill-category {
     background: white;
-    padding: 20px;
+    padding: 30px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    min-height: 180px;
     
     h4 {
       font-size: 1.1em;
@@ -274,11 +280,12 @@
 .cv-awards {
   .cv-award-item {
     background: white;
-    padding: 15px 20px;
+    padding: 25px 30px;
     margin-bottom: 10px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     border-left: 4px solid #5000ca;
+    min-height: 80px;
     
     p {
       margin: 0;

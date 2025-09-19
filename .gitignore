@@ -35,3 +35,7 @@ ehthumbs.db
 # Package manager locks (optional)
 # package-lock.json
 # yarn.lock
+
+# Documentation (keep local, exclude from remote repository)
+docs/
+CLAUDE.md

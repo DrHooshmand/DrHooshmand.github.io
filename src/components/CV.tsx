@@ -1,7 +1,7 @@
 import React from "react";
 import '../assets/styles/CV.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDownload, faEnvelope, faPhone, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { faDownload, faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import portfolioData from '../data/portfolio-data.json';
 
@@ -34,10 +34,6 @@ function CV() {
             <div className="contact-item">
               <FontAwesomeIcon icon={faEnvelope} />
               <span>{portfolioData.personal.email}</span>
-            </div>
-            <div className="contact-item">
-              <FontAwesomeIcon icon={faPhone} />
-              <span>{portfolioData.personal.phone}</span>
             </div>
             <div className="contact-item">
               <FontAwesomeIcon icon={faMapMarkerAlt} />

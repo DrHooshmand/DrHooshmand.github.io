@@ -58,7 +58,6 @@ function Contact() {
           <p>Interested in AI/ML solutions or data science consulting? Let's discuss how we can collaborate!</p>
           <div className="contact-info">
             <p><strong>Email:</strong> {portfolioData.personal.email}</p>
-            <p><strong>Phone:</strong> {portfolioData.personal.phone}</p>
             <p><strong>Location:</strong> {portfolioData.personal.location}</p>
             <p><strong>LinkedIn:</strong> <a href={portfolioData.personal.linkedin} target="_blank" rel="noreferrer">Connect with me</a></p>
           </div>
