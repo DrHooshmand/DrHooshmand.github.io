@@ -7,9 +7,13 @@ import portfolioData from '../data/portfolio-data.json';
 
 function CV() {
   const handleDownloadCV = () => {
-    // This would link to a PDF version of the CV
-    // For now, we'll show an alert
-    alert("PDF download functionality would be implemented here. The CV would be generated from the current data or linked to a static PDF file.");
+    // Download the resume PDF file
+    const link = document.createElement('a');
+    link.href = '/Resume_Hooshmand_1p.pdf';
+    link.download = 'Resume_Hooshmand_1p.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (

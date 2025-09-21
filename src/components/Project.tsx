@@ -1,11 +1,18 @@
 import React from "react";
-import mock01 from '../assets/images/mock01.png';
-import mock02 from '../assets/images/mock02.png';
-import mock03 from '../assets/images/mock03.png';
-import mock04 from '../assets/images/mock04.png';
-import mock05 from '../assets/images/mock05.png';
 import '../assets/styles/Project.scss';
 import portfolioData from '../data/portfolio-data.json';
+
+// Match the same images used in DetailedProjects
+const getProjectImage = (index: number): string => {
+  const projectImages = [
+    '/fleet-explorer.png', // 0: Intelligent Fleet Explorer - Local HP Fleet Explorer image
+    'https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=400&h=250&fit=crop&crop=center&q=80', // 1: Virtual Assistant Chatbot
+    'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop&crop=center&q=80', // 2: Smart Insight Generation Platform
+    'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=250&fit=crop&crop=center&q=80', // 3: Panacea Support Automation
+    'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=250&fit=crop&crop=center&q=80'  // 4: Autonomous Driving ML Models
+  ];
+  return projectImages[index] || projectImages[0];
+};
 
 function Project() {
     return(
@@ -13,12 +20,14 @@ function Project() {
         <h1>Key Projects & Products</h1>
         <div className="projects-grid">
             {portfolioData.projects.map((project, index) => {
-                const mockImages = [mock01, mock02, mock03, mock04, mock05];
-                const mockImage = mockImages[index % mockImages.length];
                 return (
                     <div key={index} className="project">
-                        <img src={mockImage} className="zoom" alt={project.title} width="100%"/>
-                        <h2>{project.title}</h2>
+                        <img src={getProjectImage(index)} className="zoom" alt={project.title} width="100%"/>
+                        {project.title === "Intelligent Fleet Explorer" ? (
+                            <h2><a href="https://workforceexperience.hp.com/blog/fleet-explorer/" target="_blank" rel="noopener noreferrer" style={{color: 'inherit', textDecoration: 'none'}}>{project.title}</a></h2>
+                        ) : (
+                            <h2>{project.title}</h2>
+                        )}
                         <h4 className="project-company">{project.company}</h4>
                         <p>{project.description}</p>
                         <div className="project-tech">

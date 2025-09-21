@@ -132,11 +132,38 @@
     border: 2px solid #5000ca;
     border-radius: 25px;
     transition: all 0.3s ease;
-    
+
     &:hover {
       background: #5000ca;
       color: white;
       transform: translateX(5px);
+    }
+  }
+
+  .external-links {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .external-link {
+      display: inline-block;
+      color: #666;
+      text-decoration: none;
+      font-size: 0.9em;
+      font-weight: 500;
+      padding: 8px 16px;
+      border: 1px solid #e0e0e0;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+      background: #f8f9fa;
+
+      &:hover {
+        color: #5000ca;
+        border-color: #5000ca;
+        background: #fff;
+        transform: translateX(3px);
+      }
     }
   }
 }
@@ -252,13 +279,25 @@
   .details-btn {
     color: #8a5cf6 !important;
     border-color: #8a5cf6 !important;
-    
+
     &:hover {
       background: #8a5cf6 !important;
       color: white !important;
     }
   }
-  
+
+  .external-link {
+    color: #ccc !important;
+    border-color: #444 !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+
+    &:hover {
+      color: #8a5cf6 !important;
+      border-color: #8a5cf6 !important;
+      background: rgba(255, 255, 255, 0.1) !important;
+    }
+  }
+
   .case-study {
     border-left-color: #8a5cf6 !important;
   }

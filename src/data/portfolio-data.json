@@ -6,7 +6,7 @@
     "tagline": "Pioneering AI/ML solutions and generative AI platforms for enterprise innovation",
     "location": "San Diego, California",
     "email": "shahriarhoushmand@gmail.com",
-    "linkedin": "https://www.linkedin.com/in/shahriarhooshmand/",
+    "linkedin": "https://linkedin.com/in/shahriarhooshmand",
     "residencyStatus": "U.S. Permanent Resident"
   },
   "summary": "My work spans a wide range of areas in computational science and engineering, high-performance computing, and AI/ML, with a particular focus on delivering customer-focused software products across diverse scientific disciplines by developing a full-stack, end-to-end AI software ecosystem. Currently, I am focused on building a generative AI-powered platform that enables enterprise organizations to unleash the full potential of their workforce and optimize the use of their workplace.",
@@ -31,7 +31,7 @@
       "location": "San Diego, California",
       "description": "Delivering new data science/machine learning insights for the HP TechPulse platform.",
       "achievements": [
-        "Intelligent Fleet Explorer: Prototyped generative AI pipeline system for generating intelligent insights through natural language and visualization",
+        "Intelligent Fleet Explorer: Developed AI-powered chatbot for fleet management providing instant answers about fleet performance, inventory, and device health through natural language queries",
         "Support Automation System: Prototyped LLM and GPT fine-tuned on corporate domain-specific knowledge base",
         "Panacea: Prototyped and productionized NLP-based support automation system to identify and classify customer problems",
         "Personas Identification and Device Recommendation: Prototyped and productionized personas identification using unsupervised ML"
@@ -89,13 +89,24 @@
     }
   ],
   "skills": {
-    "programming": ["Python", "PySpark", "SQL", "C/C++", "MATLAB", "CUDA", "TypeScript", "JavaScript"],
+    "programming": ["Python", "PySpark", "SQL", "C/C++", "MATLAB", "CUDA"],
     "aiml": ["Scikit-learn", "PyCaret", "PyTorch", "TensorFlow", "MLFlow", "Large Language Models", "Generative AI"],
     "cloud": ["AWS (EC2, EMR, SageMaker, QuickSight, Bedrock)", "Kubernetes", "Azure Services"],
     "specializations": ["High-Performance Computing", "GPU-accelerated Analytics", "Distributed Databases", "Big Data Processing"],
     "domains": ["Autonomous Driving", "Enterprise AI Solutions", "NLP", "Computer Vision", "Predictive Modeling"]
   },
   "projects": [
+    {
+      "title": "Intelligent Fleet Explorer",
+      "company": "HP",
+      "description": "AI-powered chatbot for fleet management that provides instant answers about fleet performance, inventory, and device health without manual report generation. Enables natural language queries for fleet-wide analysis and proactive issue resolution.",
+      "technologies": ["Generative AI", "Natural Language Processing", "AI Chatbot", "Fleet Analytics", "Performance Monitoring"],
+      "impact": "Instant fleet insights and proactive device management for enterprise IT",
+      "links": {
+        "blog": "https://workforceexperience.hp.com/blog/fleet-explorer/",
+        "docs": "https://learn.workforceexperience.hp.com/docs/overview-of-fleet-explorer"
+      }
+    },
     {
       "title": "Virtual Assistant Chatbot",
       "company": "HP",
@@ -109,13 +120,6 @@
       "description": "LLM-powered platform delivering actionable business intelligence and market foresight",
       "technologies": ["Generative AI", "Business Intelligence", "Data Analytics", "Python"],
       "impact": "Delivering actionable business intelligence"
-    },
-    {
-      "title": "Intelligent Fleet Explorer",
-      "company": "HP",
-      "description": "Generative AI pipeline system for generating intelligent insights through natural language and visualization using structured corporate telemetry datasets",
-      "technologies": ["Generative AI", "Natural Language Processing", "Data Visualization", "Big Data"],
-      "impact": "Intelligent insights generation from telemetry data"
     },
     {
       "title": "Panacea Support Automation",

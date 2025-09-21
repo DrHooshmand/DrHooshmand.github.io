@@ -5,9 +5,9 @@ import portfolioData from '../data/portfolio-data.json';
 // Static project images
 const getProjectImage = (index: number): string => {
   const projectImages = [
-    'https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=400&h=250&fit=crop&crop=center&q=80', // 0: Virtual Assistant Chatbot
-    'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop&crop=center&q=80', // 1: Smart Insight Generation Platform  
-    'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop&crop=center&q=80', // 2: Intelligent Fleet Explorer
+    'https://d1jdp2wixqg2fw.cloudfront.net/uploads/2025/04/Top-5-applications-consuming-CPU.png', // 0: Intelligent Fleet Explorer - Real HP Fleet Explorer dashboard
+    'https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=400&h=250&fit=crop&crop=center&q=80', // 1: Virtual Assistant Chatbot
+    'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop&crop=center&q=80', // 2: Smart Insight Generation Platform
     'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=250&fit=crop&crop=center&q=80', // 3: Panacea Support Automation
     'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=250&fit=crop&crop=center&q=80'  // 4: Autonomous Driving ML Models
   ];
@@ -43,7 +43,11 @@ function DetailedProjects() {
             </div>
             
             <div className="project-header">
-              <h2 className="project-title">{project.title}</h2>
+              {project.title === "Intelligent Fleet Explorer" ? (
+                <h2 className="project-title"><a href="https://workforceexperience.hp.com/blog/fleet-explorer/" target="_blank" rel="noopener noreferrer" style={{color: 'inherit', textDecoration: 'none'}}>{project.title}</a></h2>
+              ) : (
+                <h2 className="project-title">{project.title}</h2>
+              )}
               <span className="project-company">{project.company}</span>
             </div>
             
@@ -68,6 +72,30 @@ function DetailedProjects() {
                 <a href={`#project-${index + 1}`} className="details-btn">
                   View Detailed Case Study →
                 </a>
+                {(project as any).links && (
+                  <div className="external-links">
+                    {(project as any).links.blog && (
+                      <a
+                        href={(project as any).links.blog}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="external-link"
+                      >
+                        Read Blog Post →
+                      </a>
+                    )}
+                    {(project as any).links.docs && (
+                      <a
+                        href={(project as any).links.docs}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="external-link"
+                      >
+                        View Documentation →
+                      </a>
+                    )}
+                  </div>
+                )}
               </div>
             </div>
           </div>
