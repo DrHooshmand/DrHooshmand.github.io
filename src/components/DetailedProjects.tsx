@@ -9,16 +9,18 @@ const getProjectImage = (index: number): string => {
     'https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=400&h=250&fit=crop&crop=center&q=80', // 1: Virtual Assistant Chatbot
     'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop&crop=center&q=80', // 2: Smart Insight Generation Platform
     'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=250&fit=crop&crop=center&q=80', // 3: Panacea Support Automation
-    'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=250&fit=crop&crop=center&q=80'  // 4: Autonomous Driving ML Models
+    'https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=400&h=250&fit=crop&crop=center&q=80'  // 4: Autonomous Driving ML Models - Data analytics/charts
   ];
   return projectImages[index] || projectImages[0];
 };
 
 const getCaseStudyImage = (projectId: string): string => {
   const caseStudyImages: { [key: string]: string } = {
-    'project-1': 'https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=800&h=300&fit=crop&crop=center&q=80', // Virtual Assistant
-    'project-2': 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=300&fit=crop&crop=center&q=80', // Smart Insights
-    'project-3': 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=300&fit=crop&crop=center&q=80'  // Autonomous ML
+    'project-1': 'https://d1jdp2wixqg2fw.cloudfront.net/uploads/2025/04/Top-5-applications-consuming-CPU.png', // Fleet Explorer - HP dashboard
+    'project-2': 'https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=800&h=300&fit=crop&crop=center&q=80', // Virtual Assistant
+    'project-3': 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=300&fit=crop&crop=center&q=80', // Smart Insights
+    'project-4': 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=300&fit=crop&crop=center&q=80', // Panacea Support
+    'project-5': 'https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&h=300&fit=crop&crop=center&q=80'  // Autonomous ML
   };
   return caseStudyImages[projectId];
 };
@@ -104,11 +106,58 @@ function DetailedProjects() {
       
       <div className="project-case-studies">
         <h2>Detailed Case Studies</h2>
-        
+
         <div className="case-study" id="project-1">
           <div className="case-study-header">
-            <img 
+            <img
               src={getCaseStudyImage('project-1')}
+              alt="Intelligent Fleet Explorer"
+              className="case-study-image"
+            />
+            <h3>Intelligent Fleet Explorer - HP Workforce Experience Platform</h3>
+          </div>
+          <div className="case-study-content">
+            <div className="case-study-section">
+              <h4>Challenge</h4>
+              <p>Enterprise IT teams needed instant insights into fleet performance without manual reporting processes. Traditional fleet management required time-consuming data compilation to answer critical questions about device health, performance trends, and inventory management.</p>
+            </div>
+
+            <div className="case-study-section">
+              <h4>Solution Architecture</h4>
+              <ul>
+                <li>AI-powered chatbot for instant fleet data querying using natural language</li>
+                <li>Integrated analytics engine providing fleet-wide and device-specific insights</li>
+                <li>Real-time data processing for immediate response to IT queries</li>
+                <li>Feedback mechanism system to continuously improve AI accuracy</li>
+              </ul>
+            </div>
+
+            <div className="case-study-section">
+              <h4>Key Features</h4>
+              <ul>
+                <li>Natural language queries: "How many devices have high memory utilization?"</li>
+                <li>Drill-down capabilities from fleet trends to specific device analysis</li>
+                <li>Application performance monitoring and memory usage tracking</li>
+                <li>End-of-life hardware identification and inventory management</li>
+              </ul>
+            </div>
+
+            <div className="case-study-section">
+              <h4>Results & Impact</h4>
+              <ul>
+                <li>Instant fleet insights enabling proactive IT management</li>
+                <li>Reduced manual reporting time from hours to seconds</li>
+                <li>Accelerated troubleshooting processes for faster issue resolution</li>
+                <li>Enhanced data-driven decision-making for enterprise IT operations</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div className="case-study" id="project-2">
+          <div className="case-study-header">
+            <img
+              src={getCaseStudyImage('project-2')}
               alt="Virtual Assistant Chatbot"
               className="case-study-image"
             />
@@ -119,7 +168,7 @@ function DetailedProjects() {
               <h4>Challenge</h4>
               <p>HP needed to enhance customer support efficiency and provide 24/7 assistance for enterprise clients dealing with complex technical issues across multiple product lines.</p>
             </div>
-            
+
             <div className="case-study-section">
               <h4>Solution Architecture</h4>
               <ul>
@@ -129,7 +178,7 @@ function DetailedProjects() {
                 <li>Developed context-aware conversation management system</li>
               </ul>
             </div>
-            
+
             <div className="case-study-section">
               <h4>Technical Implementation</h4>
               <ul>
@@ -139,7 +188,7 @@ function DetailedProjects() {
                 <li>Integrated real-time analytics for performance monitoring</li>
               </ul>
             </div>
-            
+
             <div className="case-study-section">
               <h4>Results & Impact</h4>
               <ul>
@@ -151,11 +200,11 @@ function DetailedProjects() {
             </div>
           </div>
         </div>
-        
-        <div className="case-study" id="project-2">
+
+        <div className="case-study" id="project-3">
           <div className="case-study-header">
-            <img 
-              src={getCaseStudyImage('project-2')}
+            <img
+              src={getCaseStudyImage('project-3')}
               alt="Smart Insight Generation Platform"
               className="case-study-image"
             />
@@ -166,7 +215,7 @@ function DetailedProjects() {
               <h4>Challenge</h4>
               <p>Enterprise organizations needed actionable insights from vast amounts of structured and unstructured data to make informed business decisions quickly.</p>
             </div>
-            
+
             <div className="case-study-section">
               <h4>Solution Architecture</h4>
               <ul>
@@ -176,7 +225,7 @@ function DetailedProjects() {
                 <li>Implemented real-time data processing and visualization</li>
               </ul>
             </div>
-            
+
             <div className="case-study-section">
               <h4>Key Features</h4>
               <ul>
@@ -186,7 +235,7 @@ function DetailedProjects() {
                 <li>Interactive dashboards with drill-down capabilities</li>
               </ul>
             </div>
-            
+
             <div className="case-study-section">
               <h4>Results & Impact</h4>
               <ul>
@@ -198,11 +247,58 @@ function DetailedProjects() {
             </div>
           </div>
         </div>
-        
-        <div className="case-study" id="project-3">
+
+        <div className="case-study" id="project-4">
           <div className="case-study-header">
-            <img 
-              src={getCaseStudyImage('project-3')}
+            <img
+              src={getCaseStudyImage('project-4')}
+              alt="Panacea Support Automation"
+              className="case-study-image"
+            />
+            <h3>Panacea Support Automation - HP Enterprise Support</h3>
+          </div>
+          <div className="case-study-content">
+            <div className="case-study-section">
+              <h4>Challenge</h4>
+              <p>HP support teams needed automated systems to efficiently identify, classify, and resolve customer problems while reducing manual intervention and improving response times.</p>
+            </div>
+
+            <div className="case-study-section">
+              <h4>Solution Architecture</h4>
+              <ul>
+                <li>NLP-based problem identification and classification system</li>
+                <li>Automated customer interaction and troubleshooting workflows</li>
+                <li>Remote device diagnostics and solution deployment</li>
+                <li>Integration with existing HP support infrastructure</li>
+              </ul>
+            </div>
+
+            <div className="case-study-section">
+              <h4>Technical Implementation</h4>
+              <ul>
+                <li>Machine learning models for problem pattern recognition</li>
+                <li>Natural language processing for customer query understanding</li>
+                <li>Automated solution recommendation engine</li>
+                <li>Real-time device performance monitoring and intervention</li>
+              </ul>
+            </div>
+
+            <div className="case-study-section">
+              <h4>Results & Impact</h4>
+              <ul>
+                <li>Automated customer problem resolution with minimal human intervention</li>
+                <li>Reduced support ticket resolution time significantly</li>
+                <li>Improved customer satisfaction through faster problem identification</li>
+                <li>Enhanced support team efficiency through intelligent automation</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div className="case-study" id="project-5">
+          <div className="case-study-header">
+            <img
+              src={getCaseStudyImage('project-5')}
               alt="Autonomous Driving ML Models"
               className="case-study-image"
             />
@@ -213,7 +309,7 @@ function DetailedProjects() {
               <h4>Challenge</h4>
               <p>Develop robust machine learning models for autonomous vehicle systems capable of handling complex real-world driving scenarios with high-dimensional sensor data.</p>
             </div>
-            
+
             <div className="case-study-section">
               <h4>Technical Approach</h4>
               <ul>
@@ -223,7 +319,7 @@ function DetailedProjects() {
                 <li>Real-time inference optimization for vehicle deployment</li>
               </ul>
             </div>
-            
+
             <div className="case-study-section">
               <h4>Innovation Highlights</h4>
               <ul>
@@ -233,7 +329,7 @@ function DetailedProjects() {
                 <li>Uncertainty quantification for safety-critical applications</li>
               </ul>
             </div>
-            
+
             <div className="case-study-section">
               <h4>Results & Impact</h4>
               <ul>
