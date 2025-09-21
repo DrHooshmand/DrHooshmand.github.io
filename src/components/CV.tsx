@@ -7,13 +7,8 @@ import portfolioData from '../data/portfolio-data.json';
 
 function CV() {
   const handleDownloadCV = () => {
-    // Download the resume PDF file
-    const link = document.createElement('a');
-    link.href = '/Resume_Hooshmand_1p.pdf';
-    link.download = 'Resume_Hooshmand_1p.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    // PDF download temporarily disabled - file being updated
+    alert("PDF download is temporarily unavailable. The resume is being updated with corrected contact information.");
   };
 
   return (
