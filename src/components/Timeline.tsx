@@ -77,7 +77,7 @@ const getOrganizationLogo = (organizationName: string): JSX.Element => {
       return (
         <div style={logoContainerStyle}>
           <img
-            src="/OSU_logo.png"
+            src="/OSU_logo.svg"
             alt="The Ohio State University Logo"
             style={{ ...baseLogoStyle, width: '55px', height: '55px' }}
           />
@@ -87,7 +87,7 @@ const getOrganizationLogo = (organizationName: string): JSX.Element => {
       return (
         <div style={logoContainerStyle}>
           <img
-            src="/Sharif_logo.jpg"
+            src="/Sharif_logo.svg"
             alt="Sharif University Logo"
             style={{ ...baseLogoStyle, width: '52px', height: '52px' }}
           />
@@ -127,8 +127,8 @@ function Timeline() {
       location: edu.location,
       description: edu.description,
       achievements: edu.achievements,
-      concentration: edu.concentration,
-      gpa: edu.gpa,
+      concentration: (edu as any).concentration,
+      gpa: (edu as any).gpa,
       startYear: parseStartYear(edu.period)
     }))
   ];

@@ -9,8 +9,8 @@ import {
   Navigation,
   Footer,
   NewsExpanded,
+  News,
 } from "./components";
-import News from './components/News';
 import Publications from './components/Publications';
 import DetailedProjects from './components/DetailedProjects';
 import Courses from './components/Courses';
