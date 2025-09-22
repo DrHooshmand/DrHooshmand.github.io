@@ -50,6 +50,27 @@
     transform: scale(1.05);
 }
 
+// Dark mode styles for project elements
+.dark-mode .project-company {
+    color: #ddd;
+}
+
+.dark-mode .project-tech {
+    color: #ddd;
+}
+
+.dark-mode .project-tech strong {
+    color: #eee;
+}
+
+.dark-mode .project-impact {
+    color: #ccc;
+}
+
+.dark-mode .project-impact strong {
+    color: #eee;
+}
+
 @media screen {
     @media (max-width: 700px) {
         .projects-container {
@@ -57,11 +78,11 @@
             padding-left: 5%;
             padding-right: 5%;
         }
-  
+
         .projects-container .projects-grid {
             display: block;
         }
-      
+
         .projects-container .projects-grid .project {
             padding-bottom: 5%;
         }
