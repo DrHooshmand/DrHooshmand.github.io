@@ -19,14 +19,15 @@ import Toolbar from '@mui/material/Toolbar';
 
 const drawerWidth = 240;
 const navItems = [
-  ['Home', '/'],
-  ['Publications', '/publications'],
-  ['Projects', '/projects'],
-  ['Courses', '/courses'],
-  ['Teaching', '/teaching'],
+  ['HOME', '#top'],
+  ['TIMELINE', '#history'],
+  ['PROJECTS', '/projects'],
   ['CV', '/cv'],
-  ['Personal', '/personal'],
-  ['Contact', '#contact']
+  ['PUBLICATIONS', '/publications'],
+  ['COURSES', '/courses'],
+  ['TEACHING', '/teaching'],
+  ['PERSONAL', '/personal'],
+  ['CONTACT', '#contact']
 ];
 
 function Navigation({parentToChild, modeChange}: any) {
@@ -58,12 +59,22 @@ function Navigation({parentToChild, modeChange}: any) {
   }, []);
 
   const handleNavigation = (path: string) => {
-    if (path.startsWith('#') && location.pathname === '/') {
-      // Handle anchor links on home page
-      const section = path.substring(1);
-      const element = document.getElementById(section);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+    if (path.startsWith('#')) {
+      if (location.pathname !== '/') {
+        // Navigate to home page first, then scroll
+        window.location.href = '/' + path;
+      } else {
+        // Handle anchor links on home page
+        const section = path.substring(1);
+        if (section === 'top') {
+          // Scroll to top of page
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+          const element = document.getElementById(section);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
       }
     }
     // Router navigation will be handled by Link components
@@ -113,11 +124,34 @@ function Navigation({parentToChild, modeChange}: any) {
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
               item[1].startsWith('#') ? (
-                <Button key={item[0]} onClick={() => handleNavigation(item[1])} sx={{ color: '#fff' }}>
+                <Button
+                  key={item[0]}
+                  onClick={() => handleNavigation(item[1])}
+                  sx={{
+                    color: '#fff',
+                    textDecoration: 'none',
+                    fontWeight: 'normal',
+                    fontFamily: '"Lato", sans-serif',
+                    fontSize: '0.9rem',
+                    textTransform: 'none'
+                  }}
+                >
                   {item[0]}
                 </Button>
               ) : (
-                <Button key={item[0]} component={Link} to={item[1]} sx={{ color: '#fff', textDecoration: 'none' }}>
+                <Button
+                  key={item[0]}
+                  component={Link}
+                  to={item[1]}
+                  sx={{
+                    color: '#fff',
+                    textDecoration: 'none',
+                    fontWeight: 'normal',
+                    fontFamily: '"Lato", sans-serif',
+                    fontSize: '0.9rem',
+                    textTransform: 'none'
+                  }}
+                >
                   {item[0]}
                 </Button>
               )
