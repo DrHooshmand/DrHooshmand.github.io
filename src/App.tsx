@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import {
   Main,
   Timeline,
@@ -20,6 +20,16 @@ import Personal from './components/Personal';
 import FadeIn from './components/FadeIn';
 import './index.scss';
 
+function ScrollToTop() {
+    const location = useLocation();
+
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, [location.pathname]);
+
+    return null;
+}
+
 function App() {
     const [mode, setMode] = useState<string>('dark');
 
@@ -37,6 +47,7 @@ function App() {
 
     return (
     <Router>
+        <ScrollToTop />
         <div className={`main-container ${mode === 'dark' ? 'dark-mode' : 'light-mode'}`}>
             <Navigation parentToChild={{mode}} modeChange={handleModeChange}/>
             <Routes>

@@ -93,7 +93,12 @@ function Navigation({parentToChild, modeChange}: any) {
                 <ListItemText primary={item[0]} />
               </ListItemButton>
             ) : (
-              <ListItemButton component={Link} to={item[1]} sx={{ textAlign: 'center' }}>
+              <ListItemButton
+                component={Link}
+                to={item[1]}
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                sx={{ textAlign: 'center' }}
+              >
                 <ListItemText primary={item[0]} />
               </ListItemButton>
             )}
@@ -144,6 +149,7 @@ function Navigation({parentToChild, modeChange}: any) {
                   key={item[0]}
                   component={Link}
                   to={item[1]}
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   sx={{
                     color: '#fff',
                     textDecoration: 'none',
