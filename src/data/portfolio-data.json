@@ -54,24 +54,30 @@
       "role": "Postdoctoral Scholar",
       "period": "2019-2021",
       "location": "Berkeley, CA",
-      "description": "Advanced research in computational materials science and engineering.",
-      "achievements": []
+      "description": "Advanced research in computational materials science and machine learning applications in engineering.",
+      "achievements": [
+        "Conducted cutting-edge research at the intersection of materials science and computational methods",
+        "Developed novel computational approaches for materials design and optimization",
+        "Collaborated with interdisciplinary teams on advanced materials characterization",
+        "Published high-impact research papers in prestigious scientific journals"
+      ]
     }
   ],
   "education": [
-    {
-      "institution": "University of California, Berkeley",
-      "degree": "Postdoctoral Scholar",
-      "period": "2019-2021",
-      "location": "Berkeley, CA"
-    },
     {
       "institution": "The Ohio State University",
       "degree": "Ph.D., M.Sc. in Materials Science and Engineering",
       "concentration": "Computational Science",
       "gpa": "3.9/4.0",
       "period": "2014-2019",
-      "location": "Columbus, OH"
+      "location": "Columbus, OH",
+      "description": "Doctoral research focused on computational materials science with emphasis on atomic-scale modeling and high-performance computing.",
+      "achievements": [
+        "Presidential Fellowship Award (2018-2019) - Most prestigious graduate award at OSU",
+        "Woolley Teaching Fellowship Award (2017-2018) for academic excellence and leadership",
+        "Published 8+ peer-reviewed research papers with 700+ citations",
+        "Developed innovative computational models for materials behavior prediction"
+      ]
     },
     {
       "institution": "The Ohio State University",
@@ -79,13 +85,27 @@
       "concentration": "AI/ML in Science",
       "gpa": "4.0/4.0",
       "period": "2017-2019",
-      "location": "Columbus, OH"
+      "location": "Columbus, OH",
+      "description": "Specialized coursework in artificial intelligence and machine learning applications in scientific computing.",
+      "achievements": [
+        "Perfect 4.0 GPA in advanced computer science coursework",
+        "Focused on AI/ML applications in scientific and engineering domains",
+        "Integrated computational methods with materials science research",
+        "Developed expertise in high-performance computing and GPU acceleration"
+      ]
     },
     {
       "institution": "Sharif University of Technology",
       "degree": "B.Sc. in Engineering",
       "period": "2010-2014",
-      "location": "Tehran, Iran"
+      "location": "Tehran, Iran",
+      "description": "Undergraduate studies in engineering with early exposure to research and teaching responsibilities.",
+      "achievements": [
+        "Research Assistant at Center of Excellence: High Performance Computing Lab (2013-2014)",
+        "Teaching Assistant for multiple engineering courses (2012-2014)",
+        "Lecturer in Computer Science for cross-disciplinary programming courses (2010-2013)",
+        "Built strong foundation in engineering principles and computational methods"
+      ]
     }
   ],
   "skills": {

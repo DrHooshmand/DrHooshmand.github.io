@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Favicon Generator for Shahriar Hooshmand</title>
+</head>
+<body>
+    <h2>Custom Favicon Generator</h2>
+    <canvas id="favicon" width="64" height="64" style="border: 1px solid #ccc; image-rendering: pixelated; width: 128px; height: 128px;"></canvas>
+    <br><br>
+    <button onclick="downloadFavicon()">Download Favicon</button>
+    <button onclick="createVariant2()">Variant 2 - Tech Style</button>
+    <button onclick="createVariant3()">Variant 3 - AI Theme</button>
+
+    <script>
+        const canvas = document.getElementById('favicon');
+        const ctx = canvas.getContext('2d');
+
+        function createFavicon() {
+            // Clear canvas
+            ctx.clearRect(0, 0, 64, 64);
+
+            // Background gradient (portfolio purple theme)
+            const gradient = ctx.createLinearGradient(0, 0, 64, 64);
+            gradient.addColorStop(0, '#5000ca');
+            gradient.addColorStop(1, '#3a0096');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, 64, 64);
+
+            // Add subtle border
+            ctx.strokeStyle = '#ffffff20';
+            ctx.lineWidth = 1;
+            ctx.strokeRect(1, 1, 62, 62);
+
+            // Text styling for "SH"
+            ctx.fillStyle = '#ffffff';
+            ctx.font = 'bold 28px Arial, sans-serif';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+
+            // Add text shadow effect
+            ctx.shadowColor = 'rgba(0,0,0,0.5)';
+            ctx.shadowBlur = 2;
+            ctx.shadowOffsetX = 1;
+            ctx.shadowOffsetY = 1;
+
+            // Draw "SH" in center
+            ctx.fillText('SH', 32, 32);
+        }
+
+        function createVariant2() {
+            // Tech-style variant
+            ctx.clearRect(0, 0, 64, 64);
+
+            // Dark background
+            ctx.fillStyle = '#1a1a1a';
+            ctx.fillRect(0, 0, 64, 64);
+
+            // Circuit-like border pattern
+            ctx.strokeStyle = '#5000ca';
+            ctx.lineWidth = 2;
+            ctx.strokeRect(2, 2, 60, 60);
+
+            // Inner tech pattern
+            ctx.strokeStyle = '#5000ca40';
+            ctx.lineWidth = 1;
+            ctx.strokeRect(8, 8, 48, 48);
+
+            // Initials with tech font
+            ctx.fillStyle = '#5000ca';
+            ctx.font = 'bold 24px monospace';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('SH', 32, 32);
+
+            // Highlight
+            ctx.fillStyle = '#ffffff';
+            ctx.font = 'bold 24px monospace';
+            ctx.fillText('SH', 31, 31);
+        }
+
+        function createVariant3() {
+            // AI-themed variant
+            ctx.clearRect(0, 0, 64, 64);
+
+            // Gradient background
+            const grad = ctx.createRadialGradient(32, 32, 0, 32, 32, 32);
+            grad.addColorStop(0, '#0066cc');
+            grad.addColorStop(1, '#003366');
+            ctx.fillStyle = grad;
+            ctx.fillRect(0, 0, 64, 64);
+
+            // Neural network pattern
+            ctx.strokeStyle = '#ffffff30';
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(10, 20);
+            ctx.lineTo(32, 32);
+            ctx.lineTo(54, 20);
+            ctx.moveTo(10, 44);
+            ctx.lineTo(32, 32);
+            ctx.lineTo(54, 44);
+            ctx.stroke();
+
+            // Nodes
+            ctx.fillStyle = '#ffffff60';
+            ctx.beginPath();
+            ctx.arc(10, 20, 2, 0, Math.PI * 2);
+            ctx.arc(54, 20, 2, 0, Math.PI * 2);
+            ctx.arc(10, 44, 2, 0, Math.PI * 2);
+            ctx.arc(54, 44, 2, 0, Math.PI * 2);
+            ctx.fill();
+
+            // Center initials
+            ctx.fillStyle = '#ffffff';
+            ctx.font = 'bold 20px Arial';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('SH', 32, 32);
+        }
+
+        function downloadFavicon() {
+            const link = document.createElement('a');
+            link.download = 'favicon.png';
+            link.href = canvas.toDataURL();
+            link.click();
+        }
+
+        // Create initial favicon
+        createFavicon();
+    </script>
+</body>
+</html>

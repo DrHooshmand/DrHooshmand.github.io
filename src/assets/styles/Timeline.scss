@@ -31,8 +31,76 @@
     color: white;
 }
 
+// Education-specific styling
+.vertical-timeline-element--education {
+    .vertical-timeline-element-content {
+        border-left: 4px solid #0066cc;
+    }
+}
+
+// Experience-specific styling
+.vertical-timeline-element--experience {
+    .vertical-timeline-element-content {
+        border-left: 4px solid #5000ca;
+    }
+}
+
+// Timeline badges
+.timeline-badge {
+    margin-top: 15px;
+    margin-bottom: 5px;
+
+    .badge {
+        display: inline-block;
+        padding: 4px 12px;
+        border-radius: 12px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+
+        &.badge-education {
+            background-color: #0066cc;
+            color: white;
+        }
+
+        &.badge-experience {
+            background-color: #5000ca;
+            color: white;
+        }
+    }
+}
+
+// Education-specific subtitle styling
+.concentration {
+    font-style: italic;
+    color: #666;
+}
+
+.gpa {
+    font-weight: 600;
+    color: #0066cc;
+}
+
+// Responsive design
 @media screen and (max-width: 1170px) {
     .vertical-timeline-element .vertical-timeline-element-date {
         color: rgb(39, 40, 34);
+    }
+
+    .timeline-badge {
+        margin-top: 10px;
+
+        .badge {
+            font-size: 0.7rem;
+            padding: 3px 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .concentration, .gpa {
+        display: block;
+        margin-top: 2px;
     }
 }
