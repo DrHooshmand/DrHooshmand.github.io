@@ -53,7 +53,7 @@ const getCompanyLogo = (company: string): JSX.Element => {
           <img
             src="/Berkeley_logo.svg"
             alt="UC Berkeley Logo"
-            style={{ ...baseLogoStyle, width: '65px', height: '65px' }}
+            style={{ ...baseLogoStyle, width: '50px', height: '50px' }}
           />
         </div>
       );
