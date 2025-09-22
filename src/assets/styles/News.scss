@@ -1,0 +1,212 @@
+// News Section Styles - Berkeley Timeline Style
+.news-container {
+  // Using .items-container for standard page layout
+
+  .items-container {
+    max-width: 50%;
+  }
+}
+
+.news-header {
+  margin-bottom: 40px;
+
+  h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  .news-subtitle {
+    color: #666;
+    font-size: 1.1em;
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
+}
+
+.news-timeline {
+  margin-bottom: 40px;
+}
+
+.news-period {
+  margin-bottom: 35px;
+
+  .period-header {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #5000ca;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #5000ca;
+    padding-bottom: 5px;
+  }
+
+  .period-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    .news-item {
+      margin-bottom: 12px;
+      padding-left: 20px;
+      position: relative;
+      line-height: 1.6;
+      color: #444;
+      font-size: 1em;
+
+      &:before {
+        content: "•";
+        color: #5000ca;
+        font-weight: bold;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+
+      .news-link {
+        color: #5000ca;
+        text-decoration: none;
+        font-weight: 500;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      // News items with images layout
+      &.news-item-with-image {
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+        padding-left: 20px;
+        margin-bottom: 20px;
+
+        &:before {
+          display: none; // Hide bullet for image items
+        }
+
+        .news-image {
+          flex-shrink: 0;
+          width: 120px;
+          height: 80px;
+          border-radius: 8px;
+          overflow: hidden;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+          }
+
+          &:hover img {
+            transform: scale(1.05);
+          }
+        }
+
+        .news-content {
+          flex: 1;
+          line-height: 1.6;
+        }
+      }
+    }
+  }
+}
+
+.news-footer {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+
+  .more-news-link {
+    color: #5000ca;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1em;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// Dark mode support
+.dark-mode {
+  .news-header {
+    h1 {
+      color: white;
+    }
+
+    .news-subtitle {
+      color: #ccc;
+    }
+  }
+
+  .news-period {
+    .period-header {
+      color: #8a5cf6;
+      border-bottom-color: #8a5cf6;
+    }
+
+    .period-items .news-item {
+      color: #ddd;
+
+      &:before {
+        color: #8a5cf6;
+      }
+
+      .news-link {
+        color: #8a5cf6;
+
+        &:hover {
+          color: #b19cd9;
+        }
+      }
+
+      // Dark mode for image items
+      &.news-item-with-image {
+        .news-image {
+          box-shadow: 0 2px 8px rgba(138, 92, 246, 0.2);
+        }
+
+        .news-content {
+          color: #ddd;
+        }
+      }
+    }
+  }
+
+  .news-footer {
+    border-top-color: #444;
+
+    .more-news-link {
+      color: #8a5cf6;
+
+      &:hover {
+        color: #b19cd9;
+      }
+    }
+  }
+}
+
+// Responsive design
+@media screen and (max-width: 768px) {
+  .news-container {
+    padding: 5%;
+  }
+
+  .news-header h1 {
+    font-size: 2.5em;
+  }
+
+  .news-period {
+    .period-header {
+      font-size: 1.2em;
+    }
+
+    .period-items .news-item {
+      font-size: 0.95em;
+    }
+  }
+}

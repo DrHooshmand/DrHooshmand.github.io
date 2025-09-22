@@ -8,7 +8,9 @@ import {
   Contact,
   Navigation,
   Footer,
+  NewsExpanded,
 } from "./components";
+import News from './components/News';
 import Publications from './components/Publications';
 import DetailedProjects from './components/DetailedProjects';
 import Courses from './components/Courses';
@@ -43,6 +45,7 @@ function App() {
                         <Main/>
                         <Expertise/>
                         <Timeline/>
+                        <News/>
                         <Project/>
                         <Contact/>
                     </FadeIn>
@@ -75,6 +78,11 @@ function App() {
                 <Route path="/personal" element={
                     <FadeIn transitionDuration={700}>
                         <Personal/>
+                    </FadeIn>
+                } />
+                <Route path="/news" element={
+                    <FadeIn transitionDuration={700}>
+                        <NewsExpanded/>
                     </FadeIn>
                 } />
             </Routes>
