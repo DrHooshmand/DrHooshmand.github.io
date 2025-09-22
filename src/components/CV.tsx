@@ -6,9 +6,17 @@ import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import portfolioData from '../data/portfolio-data.json';
 
 function CV() {
+  const handleViewCV = () => {
+    window.open('/Resume_Hooshmand.pdf', '_blank');
+  };
+
   const handleDownloadCV = () => {
-    // PDF download temporarily disabled - file being updated
-    alert("PDF download is temporarily unavailable. The resume is being updated with corrected contact information.");
+    const link = document.createElement('a');
+    link.href = '/Resume_Hooshmand.pdf';
+    link.download = 'Resume_Hooshmand.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -16,10 +24,14 @@ function CV() {
       <div className="cv-header">
         <div className="cv-title-section">
           <h1>Curriculum Vitae</h1>
-          <button className="download-btn" onClick={handleDownloadCV}>
-            <FontAwesomeIcon icon={faDownload} />
-            Download PDF
-          </button>
+          <div className="cv-actions">
+            <button className="download-icon-btn" onClick={handleDownloadCV} title="Download PDF">
+              <FontAwesomeIcon icon={faDownload} />
+            </button>
+            <button className="view-pdf-btn" onClick={handleViewCV}>
+              View PDF
+            </button>
+          </div>
         </div>
         
         <div className="cv-contact-header">

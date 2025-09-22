@@ -50,7 +50,7 @@
 
     .tagline {
         font-size: 1.1em;
-        color: #bbb;
+        color: #ddd;
         margin-top: 10px;
         line-height: 1.4;
     }
@@ -65,8 +65,8 @@
 .about-section .image-wrapper {
     z-index: 2;
     img {
-        width: 150px;
-        height: 150px;
+        width: 300px;
+        height: 300px;
         border-radius: 50%;
         object-fit: cover;
         border: 3px solid #5000ca;
@@ -78,6 +78,11 @@
     text-align: center;
     padding-top: 30%;
     padding-bottom: 30%;
+}
+
+// Light mode styling for tagline
+.light-mode .about-section .content .tagline {
+    color: #666;
 }
 
 @media screen {
