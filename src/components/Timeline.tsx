@@ -7,6 +7,61 @@ import 'react-vertical-timeline-component/style.min.css';
 import '../assets/styles/Timeline.scss'
 import portfolioData from '../data/portfolio-data.json';
 
+// Company logo mapping with local image files
+const getCompanyLogo = (company: string): JSX.Element => {
+  const logoContainerStyle = {
+    width: '40px',
+    height: '40px',
+    borderRadius: '50%',
+    backgroundColor: 'white',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    overflow: 'hidden'
+  };
+
+  const baseLogoStyle = {
+    objectFit: 'cover' as const,
+    maxWidth: 'none',
+    maxHeight: 'none'
+  };
+
+  switch (company) {
+    case 'HP':
+      return (
+        <div style={logoContainerStyle}>
+          <img
+            src="/hp-logo.png"
+            alt="HP Logo"
+            style={{ ...baseLogoStyle, width: '56px', height: '38px' }}
+          />
+        </div>
+      );
+    case 'General Motors':
+      return (
+        <div style={logoContainerStyle}>
+          <img
+            src="/GM_logo.svg"
+            alt="General Motors Logo"
+            style={{ ...baseLogoStyle, width: '50px', height: '34px' }}
+          />
+        </div>
+      );
+    case 'University of California, Berkeley':
+      return (
+        <div style={logoContainerStyle}>
+          <img
+            src="/Berkeley_logo.svg"
+            alt="UC Berkeley Logo"
+            style={{ ...baseLogoStyle, width: '65px', height: '65px' }}
+          />
+        </div>
+      );
+    default:
+      return <FontAwesomeIcon icon={faBriefcase} />;
+  }
+};
+
 function Timeline() {
   return (
     <div id="history">
@@ -20,8 +75,8 @@ function Timeline() {
               contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
               contentArrowStyle={{ borderRight: '7px solid  white' }}
               date={exp.period}
-              iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
-              icon={<FontAwesomeIcon icon={faBriefcase} />}
+              iconStyle={{ background: 'white', color: 'rgb(39, 40, 34)', border: '3px solid #5000ca', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+              icon={getCompanyLogo(exp.company)}
             >
               <h3 className="vertical-timeline-element-title">{exp.role}</h3>
               <h4 className="vertical-timeline-element-subtitle">{exp.company} - {exp.location}</h4>
