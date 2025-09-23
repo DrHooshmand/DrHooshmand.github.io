@@ -86,6 +86,32 @@
 }
 
 @media screen {
+    @media (max-width: 480px) {
+        .about-section {
+            padding: 0px 2% !important;
+            min-height: 600px;
+            gap: 20px;
+        }
+
+        .about-section .content {
+            width: 96% !important;
+            padding: 2% !important;
+        }
+
+        .about-section .image-wrapper {
+            padding: 0 2% !important;
+            width: 100% !important;
+        }
+
+        .about-section .content h1 {
+            font-size: 3.5em !important;
+        }
+
+        .about-section .content p {
+            font-size: 1.2em !important;
+        }
+    }
+
     @media (max-width: 567px) {
         .nav-left{
             padding-top: 20px;
